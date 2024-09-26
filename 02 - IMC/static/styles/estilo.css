@@ -1,0 +1,155 @@
+/* estilo.css */
+
+/* Reset básico */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Define a fonte da página */
+    background-color: #f4f4f4; /* Cor de fundo da página */
+    color: #333; /* Cor do texto */
+}
+
+header {
+    background-color: #007bff; /* Cor de fundo do cabeçalho */
+    padding: 15px; /* Espaçamento interno do cabeçalho */
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+    width: 100%; /* Faz com que o cabeçalho ocupe toda a largura da página */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque ao cabeçalho */
+}
+
+nav {
+    display: inline-block; /* Mantém os links em linha */
+}
+
+nav a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 10px 20px; /* Espaçamento interno dos links */
+    margin: 0 5px; /* Espaçamento entre os links */
+    border-radius: 5px; /* Bordas arredondadas para os links */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+nav a:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+main {
+    background: white; /* Cor de fundo do conteúdo principal */
+    border-radius: 8px; /* Bordas arredondadas para o conteúdo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para o conteúdo */
+    padding: 20px; /* Espaçamento interno do conteúdo */
+    width: 300px; /* Largura fixa do conteúdo */
+}
+
+h1 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.calcimc {
+    display: flex; /* Permite layout flexível */
+    flex-direction: column; /* Coloca os itens em coluna */
+}
+
+.calc_label {
+    display: flex; /* Permite layout flexível */
+    justify-content: space-between; /* Espaça os itens dentro do container */
+    margin-bottom: 10px; /* Espaço abaixo dos rótulos */
+}
+
+.conversor_input {
+    display: flex; /* Permite layout flexível */
+    justify-content: space-between; /* Espaça os itens dentro do container */
+    margin-bottom: 10px; /* Espaço abaixo dos campos de entrada */
+}
+
+.calc_real, .calc_altura {
+    width: 45%; /* Define a largura dos campos de entrada */
+}
+
+input[type="text"] {
+    width: 100%; /* Faz o campo de entrada ocupar toda a largura disponível */
+    padding: 10px; /* Espaçamento interno do campo de entrada */
+    border: 1px solid #ccc; /* Borda do campo de entrada */
+    border-radius: 4px; /* Bordas arredondadas para o campo */
+}
+
+input[type="text"]:focus {
+    border-color: #007bff; /* Muda a cor da borda ao focar no campo */
+    outline: none; /* Remove o contorno padrão do campo */
+}
+
+.res_imc {
+    margin-top: 10px; /* Espaço acima da seção de resultado */
+}
+
+.resultado_imc {
+    margin-bottom: 10px; /* Espaço abaixo do resultado do IMC */
+}
+
+button.botao {
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+    padding: 10px; /* Espaçamento interno do botão */
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove bordas do botão */
+    border-radius: 10px; /* Bordas arredondadas para o botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+button.botao:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse sobre o botão */
+}
+
+.resultado {
+    margin-top: 20px; /* Espaço acima da seção de resultados */
+    text-align: center; /* Centraliza o texto da seção de resultados */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Estilos específicos para a página de IMC */
+h2 {
+    color: #333; /* Cor do texto do título */
+}
+
+.consulta_imc {
+    background: white; /* Cor de fundo da seção de consulta de IMCs */
+    padding: 20px; /* Espaçamento interno da seção */
+    border-radius: 8px; /* Bordas arredondadas para a seção */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque à seção */
+}
+
+table {
+    width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+    border-collapse: collapse; /* Remove o espaço entre as bordas da tabela */
+    margin-top: 10px; /* Espaço acima da tabela */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Define a borda da tabela e das células */
+}
+
+th, td {
+    padding: 12px; /* Espaçamento interno das células da tabela */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+th {
+    background-color: #007bff; /* Cor de fundo do cabeçalho da tabela */
+    color: white; /* Cor do texto do cabeçalho da tabela */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo alternada para linhas pares */
+}
+
+tr:hover {
+    background-color: #ddd; /* Cor de fundo ao passar o mouse sobre uma linha */
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade da página -->
+    <title>Consultar IMC</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="/static/styles/estilo.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+
+    <header>
+        <nav>
+            <!-- Links de navegação para registrar IMC e listar IMCs -->
+            <a href="/">Registrar IMC</a> | <!-- Link para a página de registro -->
+            <a href="/lista">Lista de IMC</a> <!-- Link para a página que lista os IMCs -->
+        </nav>
+    </header>
+    
+    <div class="consulta_imc"> <!-- Container para a lista de IMCs -->
+        <h2>Lista de IMCs</h2> <!-- Título da seção -->
+        <table> <!-- Início da tabela para exibir os dados -->
+            <thead> <!-- Cabeçalho da tabela -->
+                <tr> <!-- Linha do cabeçalho -->
+                    <th>Nome</th> <!-- Coluna para Nome -->
+                    <th>Peso</th> <!-- Coluna para Peso -->
+                    <th>Altura</th> <!-- Coluna para Altura -->
+                    <th>IMC</th> <!-- Coluna para IMC -->
+                    <th>Índice</th> <!-- Coluna para Índice de IMC -->
+                </tr>
+            </thead>
+            <tbody> <!-- Corpo da tabela onde os dados serão inseridos -->
+                {% for item in imc %} <!-- Início do loop para cada item na lista de IMCs -->
+                <tr> <!-- Linha para cada item -->
+                    <td>{{ item.nome }}</td> <!-- Coluna para o Nome -->
+                    <td>{{ item.peso }}</td> <!-- Coluna para o Peso -->
+                    <td>{{ item.altura }}</td> <!-- Coluna para a Altura -->
+                    <td>{{ item.imc }}</td> <!-- Coluna para o IMC -->
+                    <td>{{ item.indice_imc }}</td> <!-- Coluna para o Índice de IMC -->
+                </tr>
+                {% endfor %} <!-- Fim do loop -->
+            </tbody>
+        </table> <!-- Fim da tabela -->
+    </div>
+</body>
+</html>

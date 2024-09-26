@@ -1,0 +1,4 @@
+Eduardo;60.0;1.7;20.76;Peso Ideal
+Eduardo;60.0;1.7;20.76;Peso Ideal
+Eduardo;10000.0;170.0;0.35;Muito Abaixo do peso
+;0;0;0.00;Muito Abaixo do peso

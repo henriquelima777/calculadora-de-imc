@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade da página -->
+    <title>Calcular IMC</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="/static/styles/estilo.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+
+    <header>
+        <nav>
+            <!-- Links de navegação -->
+            <a href="/">Registrar IMC</a> | <!-- Link para a página de registro -->
+            <a href="/lista">Lista de IMC</a> <!-- Link para a página de lista de IMCs -->
+        </nav>
+    </header>
+    
+    <main>
+        <h1>CALCULAR IMC</h1> <!-- Título principal da página -->
+        <div class="calcimc"> <!-- Container para o formulário de cálculo do IMC -->
+            <form action="" method="post" class="calc_formulario"> <!-- Formulário para calcular IMC -->
+                <div class="calc_label">
+                    <label for="nome">Nome:</label> <!-- Label para o campo de nome -->
+                    <input type="text" name="nome" value="{{ nome }}"> <!-- Campo de entrada para o nome -->
+                </div>
+                <div class="calc_label">
+                    <label for="peso">Peso:</label> <!-- Label para o campo de peso -->
+                    <input type="text" name="peso" value="{{ peso }}"> <!-- Campo de entrada para o peso -->
+                </div>
+                <div class="calc_label">
+                    <label for="altura">Altura:</label> <!-- Label para o campo de altura -->
+                    <input type="text" name="altura" value="{{ altura }}"> <!-- Campo de entrada para a altura -->
+                </div>
+                <div class="res_imc"> <!-- Container para os resultados do IMC -->
+                    <div class="resultado_imc">
+                        <label for="imc">Seu IMC:</label> <!-- Label para o resultado do IMC -->
+                        <input type="text" name="imc" value="{{ imc }}" readonly> <!-- Campo de entrada para o IMC (somente leitura) -->
+                    </div>
+                    <div class="resultado_indice">
+                        <label for="indice_imc">Índice de IMC:</label> <!-- Label para o índice de IMC -->
+                        <input type="text" name="indice_imc" value="{{ indice_imc }}" readonly> <!-- Campo de entrada para o índice de IMC (somente leitura) -->
+                    </div>
+                    <button type="submit" class="botao">Calcular IMC</button> <!-- Botão para submeter o formulário e calcular o IMC -->
+                </div>
+            </form>
+        </div>
+        <div class="resultado">
+            <!-- Você pode exibir resultados aqui, se necessário -->
+        </div>
+    </main>
+</body>
+</html>
